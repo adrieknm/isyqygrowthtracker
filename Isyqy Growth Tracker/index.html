@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+  </head>
+<body>
+<button id="toggleDark" class="btn">🌙 Dark Mode</button>
+  <div class="container">
+  <h1>👶 Isyqy Growth Tracker</h1>
+
+  <!-- SUSU -->
+  <section>
+    <h2>Konsumsi Susu</h2>
+    <div class="inputs">
+      <input type="time" id="waktuSusu" placeholder="Waktu">
+      <input type="number" id="volumeSusu" placeholder="Volume (ml)">
+      <select id="statusSusu">
+        <option value="habis">Habis</option>
+        <option value="tidak habis">Tidak Habis</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <button id="btnTambahSusu">Tambah</button>
+      <button id="toggleSusu">Sembunyikan / Tampilkan</button>
+      <button id="hapusSusu">Hapus Semua</button>
+    </div>
+    <div class="table-container">
+      <table id="tabelSusu">
+        <thead>
+          <tr>
+            <th>Tanggal</th><th>Waktu</th><th>Volume (ml)</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BAB -->
+  <section>
+    <h2>BAB</h2>
+    <div class="inputs">
+      <input type="date" id="tglBab">
+      <select id="teksturBab">
+        <option value="keras">Keras</option>
+        <option value="normal">Normal</option>
+        <option value="cair">Cair</option>
+      </select>
+    </div>
+    <div class="buttons">
+      <button id="btnTambahBab">Tambah</button>
+      <button id="toggleBab">Sembunyikan / Tampilkan</button>
+      <button id="hapusBab">Hapus Semua</button>
+    </div>
+    <div class="table-container">
+      <table id="tabelBab">
+        <thead>
+          <tr><th>Tanggal</th><th>Tekstur</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- GEJALA -->
+  <section>
+    <h2>Gejala</h2>
+    <div class="inputs">
+      <input type="date" id="tglGejala">
+      <select id="statusGejala">
+        <option value="ya">Ya</option>
+        <option value="tidak">Tidak</option>
+      </select>
+      <input type="text" id="catatanGejala" placeholder="Catatan">
+    </div>
+    <div class="buttons">
+      <button id="btnTambahGejala">Tambah</button>
+      <button id="toggleGejala">Sembunyikan / Tampilkan</button>
+      <button id="hapusGejala">Hapus Semua</button>
+    </div>
+    <div class="table-container">
+      <table id="tabelGejala">
+        <thead>
+          <tr><th>Tanggal</th><th>Status</th><th>Catatan</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- LAPORAN -->
+  <section>
+    <h2>Laporan</h2>
+    <div class="inputs">
+      <input type="date" id="startDate">
+      <input type="date" id="endDate">
+    </div>
+    <button id="btnCetak">Cetak PDF</button>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
